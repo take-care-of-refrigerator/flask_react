@@ -17,7 +17,6 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
-      ...rules,
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: "asset/resource",
@@ -43,4 +42,10 @@ module.exports = {
     extensions: [".js", ".ts", ".jsx", ".tsx", ".css", ".json"],
   },
   mode: "development",
+  devServer: {
+    host: "localhost",
+    port: 3000,
+    historyApiFallback: true,
+    open: true,
+  },
 };
