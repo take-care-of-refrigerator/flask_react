@@ -1,10 +1,17 @@
 import Calendar from "./comp/Calendar";
+import RightMenu from "./comp/RightMenu";
+import styled from "styled-components";
 
 const Home = () => {
   return (
-    <div>
+    <HomeContainer>
       <Calendar />
-    </div>
+      <RightMenu />
+    </HomeContainer>
   );
 };
 export default Home;
+
+const HomeContainer = styled.div`
+  display: flex;
+`;
