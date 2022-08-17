@@ -1,8 +1,15 @@
+import styled from "styled-components";
+
 const NavBar = () => {
   return (
-    <nav>
+    <Nav>
       <h1>navbar</h1>
-    </nav>
+    </Nav>
   );
 };
 export default NavBar;
+
+const Nav = styled.nav`
+  background-color: tomato;
+  width: 100%;
+`;
