@@ -2,3 +2,19 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.react-datepicker,
+.react-datepicker__month-container {
+  width: 600px;
+  height: 600px;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+  width: 12%;
+}
+
+.react-datepicker__day {
+  height: 100px;
+  line-height: 100px;
+}
