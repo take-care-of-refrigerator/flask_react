@@ -22,6 +22,7 @@ const FrigeInput = () => {
           onClick={() => {
             setFrige((prev) => [...prev, { name: inputData, content: "new" }]);
             setInputData("");
+
           }}
         >
           추가

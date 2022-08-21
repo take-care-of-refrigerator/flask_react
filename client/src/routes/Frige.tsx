@@ -23,6 +23,7 @@ const Frige = () => {
     setSecondMenu("추천 제품");
   }, [frige]);
 
+
   const memo = useMemo(() => {
     return frige.map(
       (item, index) => {
@@ -33,6 +34,7 @@ const Frige = () => {
       }
     );
   }, [frige]);
+
   return (
     <>
       <div>
