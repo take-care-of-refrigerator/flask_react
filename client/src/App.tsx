@@ -1,26 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Frige from "./components/Frige";
-import Home from "./components/Home";
-import Layout from "./components/Layout";
-import { ThemeProvider } from "styled-components";
-import theme from "./public/theme";
+import Frige from "./routes/Frige";
+import Home from "./routes/Home";
+import Layout from "./routes/Layout";
+import Nutritionist from "./routes/Nutritionist";
+import Diary from "./routes/Diary";
+import GlobalStyle from "./public/theme";
 import { RecoilRoot } from "recoil";
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <RecoilRoot>
-        <Router>
-          <Routes>
-            <Route element={<Layout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/frige" element={<Frige />} />
-              <Route path="/diary/:id" element={<Frige />} />
-            </Route>
-          </Routes>
-        </Router>
-      </RecoilRoot>
-    </ThemeProvider>
+    <RecoilRoot>
+      <GlobalStyle />
+      <Router>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/frige" element={<Frige />} />
+            <Route path="/nutritionist" element={<Nutritionist />} />
+            <Route path="/menu" element={<Nutritionist />} />
+            <Route path="/diary/:id" element={<Diary />} />
+          </Route>
+        </Routes>
+      </Router>
+    </RecoilRoot>
   );
 };
 export default App;
