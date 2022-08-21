@@ -8,21 +8,22 @@ import GlobalStyle from "./public/theme";
 import { RecoilRoot } from "recoil";
 
 const App = () => {
-  return (
+
+    return (
     <RecoilRoot>
-      <GlobalStyle />
-      <Router>
+        <GlobalStyle />
+        <Router>
         <Routes>
-          <Route element={<Layout />}>
+            <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/frige" element={<Frige />} />
             <Route path="/nutritionist" element={<Nutritionist />} />
             <Route path="/menu" element={<Nutritionist />} />
             <Route path="/diary/:id" element={<Diary />} />
-          </Route>
+            </Route>
         </Routes>
-      </Router>
+        </Router>
     </RecoilRoot>
-  );
+    );
 };
 export default App;

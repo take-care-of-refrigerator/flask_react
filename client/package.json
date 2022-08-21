@@ -30,5 +30,6 @@
     "recoil": "^0.7.5",
     "styled-components": "^5.3.5",
     "webpack-dev-server": "^4.9.3"
-  }
+  },
+  "lint": "eslint pc/src/main/fe/**/*.jsx mobile/src/main/fe/**/*.jsx"
 }
