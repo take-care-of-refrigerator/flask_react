@@ -24,7 +24,7 @@ const Menu = ({ title, content }: Props) => {
 
   return (
     <MenuSection onClick={onClick}>
-      <h4>{title}</h4>
+      <Titleh4>{title}</Titleh4>
       <div>{content}</div>
     </MenuSection>
   );
@@ -32,14 +32,19 @@ const Menu = ({ title, content }: Props) => {
 
 export default Menu;
 
+const Titleh4 = styled.h4`
+  color: #5F0380;
+`
+
 const MenuSection = styled.section`
   width: 300px;
   height: 350px;
   margin: 10px;
   padding: 10px;
   border-radius: 4px;
-  background-color: #ececec;
+  background-color: #fdfdfd;
+  border: solid 1px #ececec;
+  box-shadow: 0.3px 0.3px 0.3px 0.3px #ececec;
   cursor: pointer;
 `;
 
-const MenuTitle = styled.h4;

@@ -38,7 +38,6 @@ const Frige = () => {
   return (
     <>
       <div>
-        <InputModal />
         <FrigeUl>{memo}</FrigeUl>
       </div>
       <RightMenu />

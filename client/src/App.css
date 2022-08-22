@@ -18,3 +18,22 @@ body {
   height: 100px;
   line-height: 100px;
 }
+
+.react-datepicker__header {
+  background-color: #eaeaea;
+  border-bottom: none;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name{
+  color: black;
+}
+
+.react-datepicker {
+  border: 0.5px solid #ececec;
+  box-shadow: 0.3px 0.3px 0.5px 0.5px #ececec;
+}
+
+.react-datepicker__day--selected{
+  background-color: #d7a7e0;
+}

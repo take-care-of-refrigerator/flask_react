@@ -7,7 +7,7 @@ interface Props {
 const Modal = ({ children }: Props) => {
   return (
     <ModalBox onClick={(event) => event.stopPropagation()}>
-      <h1>Modal</h1>
+      <ModalTitle>Modal</ModalTitle>
       {children}
     </ModalBox>
   );
@@ -15,11 +15,18 @@ const Modal = ({ children }: Props) => {
 
 export default Modal;
 
+const ModalTitle = styled.h1`
+  background-color: #eaeaea;
+  color: black;
+`
+
 const ModalBox = styled.div`
   z-index: 9999;
-  background-color: tomato;
-  position: absolute;
+  background-color: #eaeaea;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 4px;
+  padding: 12px;
 `;

@@ -4,6 +4,7 @@ import Home from "./routes/Home";
 import Layout from "./routes/Layout";
 import Nutritionist from "./routes/Nutritionist";
 import Diary from "./routes/Diary";
+import SignUp from "./routes/SignUp";
 import GlobalStyle from "./public/theme";
 import { RecoilRoot } from "recoil";
 
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/nutritionist" element={<Nutritionist />} />
             <Route path="/menu" element={<Nutritionist />} />
             <Route path="/diary/:id" element={<Diary />} />
+            <Route path="/signup" element={<SignUp />} />
             </Route>
         </Routes>
         </Router>

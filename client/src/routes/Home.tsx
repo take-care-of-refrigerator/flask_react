@@ -5,7 +5,6 @@ import { firstMenuState, secondMenuState } from "../states/frigeState";
 import { useRecoilState } from "recoil";
 import { useEffect } from "react";
 
-import InputModal from "../routes/components/InputModal";
 
 const Home = () => {
   const [, setFirstMenu] = useRecoilState(firstMenuState);
@@ -17,7 +16,6 @@ const Home = () => {
   }, []);
   return (
     <>
-      <InputModal />
       <Calendar />
       <RightMenu />
     </>
