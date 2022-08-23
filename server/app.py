@@ -11,8 +11,7 @@ def index():
     return '<h1>Hello!</h1>'
   elif request.method == "POST":
     user_id = request.form.get('userId')
-    print('hi')
-    print('hi')
+    return user_id
 
 if __name__ == "__main__":
   app.run('0.0.0.0', debug=True)
