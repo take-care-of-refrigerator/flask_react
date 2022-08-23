@@ -31,7 +31,7 @@ const SignIn = () => {
           onChange={(event) => setUserId(event.currentTarget.value)}
           ref={userIdRef}
         />
-        비밀번호:
+        비밀번호2:
         <input
           style={{margin: `0 10px`}}
           name="password"
