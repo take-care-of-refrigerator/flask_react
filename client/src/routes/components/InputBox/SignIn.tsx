@@ -12,11 +12,12 @@ const SignIn = () => {
   useEffect(() => {}, [userIdRef]);
   return (
     <div>
-      <form action="/">
+      <form action="/" method="post">
         아이디:
         <input
           style={{margin: `0 10px`}}
           type="text"
+          name="userId"
           value={userId}
           onChange={(event) => setUserId(event.currentTarget.value)}
           ref={userIdRef}
@@ -24,11 +25,12 @@ const SignIn = () => {
         비밀번호:
         <input
           style={{margin: `0 10px`}}
+          name="password"
           type="password"
           value={passowrd}
           onChange={(event) => setPassword(event.currentTarget.value)}
         />
-        <button>로그인</button>
+        <button type="submit">로그인</button>
       </form>
     </div>
   );
