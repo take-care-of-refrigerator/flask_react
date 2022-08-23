@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 
 import Modal from "../Modal";
 import InputBox from "../InputBox";
-import SignUp from "../../components/InputBox/SignUp";
 
 
 import { isModalState } from "../../../states/frigeState";

@@ -1,18 +1,27 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, {useState, useRef, useEffect, FormEvent} from "react";
 import styled from "styled-components";
+import axios from 'axios'
 
 const SignIn = () => {
   let userIdRef: React.MutableRefObject<HTMLInputElement | null> = useRef(null);
   const [userId, setUserId] = useState("");
-  const [passowrd, setPassword] = useState("");
+  const [password, setPassword] = useState("");
   useEffect(() => {
     userIdRef?.current?.focus();
   }, []);
 
   useEffect(() => {}, [userIdRef]);
+
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    axios.post('http://10.0.15.202:5000', {
+      userId,
+      password
+    })
+  }
   return (
     <div>
-      <form action="http://10.0.15.202:5000" method="post">
+      <form onSubmit={onSubmit}>
         아이디:
         <input
           style={{margin: `0 10px`}}
@@ -27,7 +36,7 @@ const SignIn = () => {
           style={{margin: `0 10px`}}
           name="password"
           type="password"
-          value={passowrd}
+          value={password}
           onChange={(event) => setPassword(event.currentTarget.value)}
         />
         <button type="submit">로그인</button>
