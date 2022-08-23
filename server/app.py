@@ -4,7 +4,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=('GET'))
+@app.route('/', methods=('GET', 'POST'))
 def index():
   if request.method == "GET":
     return '<h1>Hello!</h1>'
