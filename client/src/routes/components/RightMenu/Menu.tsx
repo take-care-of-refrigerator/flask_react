@@ -37,8 +37,8 @@ const Titleh4 = styled.h4`
 `
 
 const MenuSection = styled.section`
-  width: 300px;
-  height: 350px;
+  width: 250px;
+  height: 270px;
   margin: 10px;
   padding: 10px;
   border-radius: 4px;

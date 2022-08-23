@@ -15,6 +15,7 @@ const SignIn = () => {
       <form action="/">
         아이디:
         <input
+          style={{margin: `0 10px`}}
           type="text"
           value={userId}
           onChange={(event) => setUserId(event.currentTarget.value)}
@@ -22,6 +23,7 @@ const SignIn = () => {
         />
         비밀번호:
         <input
+          style={{margin: `0 10px`}}
           type="password"
           value={passowrd}
           onChange={(event) => setPassword(event.currentTarget.value)}
