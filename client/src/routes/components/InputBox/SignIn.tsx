@@ -12,7 +12,7 @@ const SignIn = () => {
   useEffect(() => {}, [userIdRef]);
   return (
     <div>
-      <form action="http://localhost:5000" method="post">
+      <form action="http://10.0.15.202:5000" method="post">
         아이디:
         <input
           style={{margin: `0 10px`}}
