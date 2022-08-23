@@ -9,7 +9,7 @@ def index():
   if request.method == "GET":
     return '<h1>Hello!</h1>'
   else:
-    return request.form.get('userId')
+    print(request.form.get('userId'))
 
 if __name__ == "__main__":
   app.run('0.0.0.0', debug=True)
