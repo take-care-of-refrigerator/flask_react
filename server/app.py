@@ -8,7 +8,7 @@ CORS(app)
 def index():
   if request.method == "GET":
     return '<h1>Hello!</h1>'
-  else:
+  elif request.method == "POST":
     print(request.form.get('userId'))
 
 if __name__ == "__main__":
