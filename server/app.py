@@ -10,7 +10,8 @@ def index():
     print('hi')
     return '<h1>Hello!</h1>'
   elif request.method == "POST":
-    print(request.form.get('userId'))
+    user_id = request.form.get('userId')
+    return user_id
 
 if __name__ == "__main__":
   app.run('0.0.0.0', debug=True)
