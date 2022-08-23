@@ -7,6 +7,7 @@ CORS(app)
 @app.route('/', methods=('GET', 'POST'))
 def index():
   if request.method == "GET":
+    print('hi')
     return '<h1>Hello!</h1>'
   elif request.method == "POST":
     print(request.form.get('userId'))
