@@ -22,23 +22,27 @@ const SignIn = () => {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        아이디:
-        <input
-          style={{margin: `0 10px`}}
-          type="text"
-          name="userId"
-          value={userId}
-          onChange={(event) => setUserId(event.currentTarget.value)}
-          ref={userIdRef}
-        />
-        비밀번호2:
-        <input
-          style={{margin: `0 10px`}}
-          name="password"
-          type="password"
-          value={password}
-          onChange={(event) => setPassword(event.currentTarget.value)}
-        />
+        <div>
+          아이디:
+          <input
+            style={{margin: `0 10px`}}
+            type="text"
+            name="userId"
+            value={userId}
+            onChange={(event) => setUserId(event.currentTarget.value)}
+            ref={userIdRef}
+          />
+        </div>
+        <div>
+          비밀번호:
+          <input
+            style={{margin: `0 10px`}}
+            name="password"
+            type="password"
+            value={password}
+            onChange={(event) => setPassword(event.currentTarget.value)}
+          />
+        </div>
         <button type="submit">로그인</button>
       </form>
     </div>
