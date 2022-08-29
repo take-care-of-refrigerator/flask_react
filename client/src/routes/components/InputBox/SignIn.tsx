@@ -20,7 +20,7 @@ const SignIn = () => {
     })
   }
   return (
-    <div>
+    <LoginContainer>
       <form onSubmit={onSubmit}>
         <div>
           아이디:
@@ -43,13 +43,24 @@ const SignIn = () => {
             onChange={(event) => setPassword(event.currentTarget.value)}
           />
         </div>
-        <button type="submit">로그인</button>
+        <LoginButton type="submit">로그인</LoginButton>
       </form>
-    </div>
+    </LoginContainer>
   );
 };
 
 export default SignIn;
 
+const LoginContainer = styled.div`
+  width: 200px;
+  height: 200px;
+`
+
+const LoginButton = styled.button`
+  border: none;
+  background-color: white;
+  padding: 4px;
+  border-radius: 4px;
+`
 
 
