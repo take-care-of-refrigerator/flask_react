@@ -2,6 +2,8 @@ import React, {useRef, useState} from "react";
 
 import styled from "styled-components";
 
+
+
 const SignUp = () => {
   let userIdRef: React.MutableRefObject<HTMLInputElement | null> = useRef(null);
   const [userId, setUserId] = useState("");
@@ -9,6 +11,7 @@ const SignUp = () => {
   return (
     <SignContainer>
       <form action="/">
+        <SignBox>
         아이디:
         <input
           type="text"
@@ -22,49 +25,8 @@ const SignUp = () => {
           value={passowrd}
           onChange={(event) => setPassword(event.currentTarget.value)}
         />
-        키:
-        <input
-          type="text"
-          value={userId}
-          onChange={(event) => setUserId(event.currentTarget.value)}
-          ref={userIdRef}
-        />
-        몸무게:
-        <input
-          type="text"
-          value={userId}
-          onChange={(event) => setUserId(event.currentTarget.value)}
-          ref={userIdRef}
-        />
-        성별:
-        <input
-          type="text"
-          value={userId}
-          onChange={(event) => setUserId(event.currentTarget.value)}
-          ref={userIdRef}
-        />
-        활동레벨:
-        <input
-          type="text"
-          value={userId}
-          onChange={(event) => setUserId(event.currentTarget.value)}
-          ref={userIdRef}
-        />
-        좋아하는 음식1:
-        <input
-          type="text"
-          value={userId}
-          onChange={(event) => setUserId(event.currentTarget.value)}
-          ref={userIdRef}
-        />
-        좋아하는 음식2:
-        <input
-          type="text"
-          value={userId}
-          onChange={(event) => setUserId(event.currentTarget.value)}
-          ref={userIdRef}
-        />
-        <button>로그인</button>
+          <SignUpButton>회원가입</SignUpButton>
+        </SignBox>
       </form>
     </SignContainer>
   );
@@ -73,6 +35,16 @@ const SignUp = () => {
 export default SignUp;
 
 const SignContainer = styled.div`
-  width: 60%;
+  width: 100%;
+  margin: 40px auto 0;
+`
+const SignBox = styled.div`
+  width: 30%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+`
+const SignUpButton = styled.button`
+  width: 100px;
+  margin-top: 10px;
 `
